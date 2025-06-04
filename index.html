@@ -11,6 +11,13 @@
     <meta name="description" content="Raquel Marim - Locutora Profissional. Gravação de spots, institucionais, espera telefônica e mensagens.">
 </head>
 <body>
+    <!-- Menu Toggle Button (Fixed) -->
+    <div class="menu-toggle-fixed">
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -25,9 +32,6 @@
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </nav>
         </div>
     </header>
@@ -328,6 +332,21 @@
         // Menu Toggle
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
+            document.querySelector('header').classList.toggle('visible');
+        });
+        
+        // Ocultar header durante a rolagem
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                // Rolando para baixo
+                document.querySelector('header').classList.add('hidden');
+            } else {
+                // Rolando para cima
+                document.querySelector('header').classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         });
 
         // Portfolio Filter
