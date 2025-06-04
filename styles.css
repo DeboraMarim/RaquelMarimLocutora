@@ -118,16 +118,16 @@ header .container {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin: 0;
-    font-family: "Edu QLD Hand", cursive;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .logo p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: rgb(255, 255, 255);
 }
 
